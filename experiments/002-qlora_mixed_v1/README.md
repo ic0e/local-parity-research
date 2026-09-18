@@ -22,6 +22,8 @@ Combined the mini reasoning + the 200 examples into `mixed_reasoning_v1`.
 
 Fine tuning took about ~1 hour on Colab.
 
+**CODE USED FOR FINE-TUNING:** [qlora_tuning_2.ipynb](qlora_tuning_2.ipynb)
+
 #### PARAMS
 
 ```python
