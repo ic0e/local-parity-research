@@ -6,4 +6,4 @@ Each experiment has its own folder with the dataset used, the training config, a
 
 ## Experiments
 - [001 - Qwen7B-QLoRA](experiments/001-Qwen7B-QLoRA) [**Model Fail HIGH SEVERITY**] - The first experiment, writeup is still WIP due to it not being a priority. Data examples: ~1500.
-- [002 - qlora_mixed_reasoning_v1](experiments/qlora_mixed_reasoning_v1/) [**Model Fail MEDIUM SEVERITY**] - Base model wins on code generation. Fine tune introduces duplication and reasoning bugs. A drastic improvement from 001, with less data examples (~500).
+- [002 - qlora_mixed_reasoning_v1](experiments/002-qlora_mixed_v1/) [**Model Fail MEDIUM SEVERITY**] - Base model wins on code generation. Fine tune introduces duplication and reasoning bugs. A drastic improvement from 001, with less data examples (~500).
