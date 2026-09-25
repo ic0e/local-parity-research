@@ -2,6 +2,44 @@
 2026-09-18
 TEST CASE FAILURE - DOES NOT PERFORM AS GOOD AS BASE
 
+### RESULTS
+
+After experimenting, the model seemingly performed better at thinking than its base, but it has major drawbacks. Noted results;
+
+#### DRAWBACKS & NEGATIVES
+
+- Writes full code 1 or more times inside its `<think>` brackets, then writes it again in the answer. - **POSSIBLE CAUSE:** _training data has examples where that happens, it learnt from there_
+    
+- Sidetracks from the actual prompt -- ignores the main question and starts over-explaining unprompted topics. Gets distracted and over-explains.
+    
+- Bugs -- writes down wrong code, with the wrong fixes. Obvious mistakes get written as an answer.  
+    EXAMPLE: `amount > self.balance` is correct when withdrawing money. Fine-tune spits out: `amount >= self.balance` - so if you attempt to withdraw your exact sum, it will throw an exception. _CRITICAL MISTAKE - the reason why this experiment's status went to a test case failure._
+    
+
+#### POSITIVES
+
+- Thinking is properly done & short. Does not bloat unnecessarily _too much._  
+    **NOTE:** _the model still overdoes thinking, but this alone would not make the experiment a fail._
+    
+- When correct, the fine-tune's code often includes better edge case handling and helper methods than the base. However, this is inconsistent and often buried under duplication.
+    
+
+### HYPOTHESIS
+
+Data quality is the main culprit of the intense drawbacks. The mini-reasoning could be faulty, the dataset needs more filtering and more data.
+
+**Suggested fixes:** research more dataset types, mix them with better ratios. `qlora_1500` examples is faulty, because it caused bloat on its on in previous experiments. Either heavily filter it next time or completely discard it and replace with a better thinking set.
+
+**Next steps:**  
+Improve on data only, keep using the same training algorithm. 20-30% performance increase is expected after all of the examples are good. The reason this failed is because the dataset is unsanitized. Training algorithm, setup and parameters is presumed to be good for the time being.
+
+The goals for the next test case are narrow down possible mistakes in the data and other factors that ruin model performance.
+
+A test case will be determined a success and publish-worthy for the paper once a fine-tuned model can confidently outperform its derivative model.
+
+> **ADDITIONAL INFO**
+> Model weights are not published. This run was a negative result and the weights are not useful for downstream use. A future run will release weights if it outperforms the base.
+
 ### DATA
 
 DATA TRAINED ON: [mixed_reasoning_v1.jsonl](mixed_reasoning_v1.jsonl)  
@@ -88,41 +126,3 @@ trainer = SFTTrainer(
     ),
 )
 ```
-
-### RESULTS
-
-After experimenting, the model seemingly performed better at thinking than its base, but it has major drawbacks. Noted results;
-
-#### DRAWBACKS & NEGATIVES
-
-- Writes full code 1 or more times inside its `<think>` brackets, then writes it again in the answer. - **POSSIBLE CAUSE:** _training data has examples where that happens, it learnt from there_
-    
-- Sidetracks from the actual prompt -- ignores the main question and starts over-explaining unprompted topics. Gets distracted and over-explains.
-    
-- Bugs -- writes down wrong code, with the wrong fixes. Obvious mistakes get written as an answer.  
-    EXAMPLE: `amount > self.balance` is correct when withdrawing money. Fine-tune spits out: `amount >= self.balance` - so if you attempt to withdraw your exact sum, it will throw an exception. _CRITICAL MISTAKE - the reason why this experiment's status went to a test case failure._
-    
-
-#### POSITIVES
-
-- Thinking is properly done & short. Does not bloat unnecessarily _too much._  
-    **NOTE:** _the model still overdoes thinking, but this alone would not make the experiment a fail._
-    
-- When correct, the fine-tune's code often includes better edge case handling and helper methods than the base. However, this is inconsistent and often buried under duplication.
-    
-
-### HYPOTHESIS
-
-Data quality is the main culprit of the intense drawbacks. The mini-reasoning could be faulty, the dataset needs more filtering and more data.
-
-**Suggested fixes:** research more dataset types, mix them with better ratios. `qlora_1500` examples is faulty, because it caused bloat on its on in previous experiments. Either heavily filter it next time or completely discard it and replace with a better thinking set.
-
-**Next steps:**  
-Improve on data only, keep using the same training algorithm. 20-30% performance increase is expected after all of the examples are good. The reason this failed is because the dataset is unsanitized. Training algorithm, setup and parameters is presumed to be good for the time being.
-
-The goals for the next test case are narrow down possible mistakes in the data and other factors that ruin model performance.
-
-A test case will be determined a success and publish-worthy for the paper once a fine-tuned model can confidently outperform its derivative model.
-
-> **ADDITIONAL INFO**
-> Model weights are not published. This run was a negative result and the weights are not useful for downstream use. A future run will release weights if it outperforms the base.
