@@ -5,5 +5,6 @@ This is a repository where I document my experiments with fine tuning small mode
 Each experiment has its own folder with the dataset used, the training config, and a writeup of the results. Writeups include the hypothesis, the failure modes, and more information. (lab notebook style) Documented so the results are reproducible.
 
 ## Experiments
-- [001 - Qwen7B-QLoRA](experiments/001-Qwen7B-QLoRA) [**Model Fail HIGH SEVERITY**] - The first experiment, writeup is still WIP due to it not being a priority. Data examples: ~1500.
-- [002 - qlora_mixed_reasoning_v1](experiments/002-qlora_mixed_v1/) [**Model Fail MEDIUM SEVERITY**] - Base model wins on code generation. Fine tune introduces duplication and reasoning bugs. A drastic improvement from 001, with less data examples (~500).
+- [001 - Qwen7B-QLoRA](experiments/001-Qwen7B-QLoRA) [**FAIL - SEVERE**] - The first experiment, writeup is still WIP due to it not being a priority. Data examples: `~1500`.
+- [002 - qlora_mixed_reasoning_v1](experiments/002-qlora_mixed_v1/) [**FAIL - MODERATE**] - Base model wins on code generation. Fine tune introduces duplication and reasoning bugs. A drastic improvement from 001, with less data examples (`500`).
+- [003 - qlora_smallthoughts](experiments/003-qlora_smallthoughts) [**FAIL - MILD**] - Format improved, capability ties the base model. Data examples: `1500`.
