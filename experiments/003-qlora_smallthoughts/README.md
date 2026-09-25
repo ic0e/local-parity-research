@@ -11,7 +11,9 @@ Format quality improved drastically - the model reliably produces traces of `<|b
 
 Since both the base model and the fine-tune performed poorly, using a better fine tune of Qwen2.5 (e.g. Coder-Instruct) for coding and reasoning would be a better base. Another possible solution would be using more verified code examples in the dataset.
 
-Diagnosis: the training data is predominantly math, and its verification pattern is symbolic (algebraic substitution), not execution-based (tracing code on concrete inputs). The model learned the shape of thinking but not code verification. Additionally, including the system prompt during training caused the model to gate thinking on it, which was not the intended behavior. The next experiment will revert `format_row` to user-only and mix in code verification traces.
+The system prompt was included in the training context (a mistake carried over from the previous pipeline, not intended). This caused the model to gate thinking on the system prompt - a behavior we will remove in Run 3.
+
+Diagnosis: the training data is predominantly math, and its verification pattern is symbolic (algebraic substitution), not execution-based (tracing code on concrete inputs). The model learned the shape of thinking but not code verification. Additionally, including the system prompt during training caused the model to gate thinking on it, which was not the intended behavior and it affects responses in a bad way. The next experiment will revert `format_row` to user-only and mix in code verification traces.
 
 ## DATA
 
@@ -21,5 +23,8 @@ DATA TRAINED ON: [small-thoughts-1500.jsonl](small-thoughts-1500.jsonl)
 SOURCE DATA:  
 [small-thoughts-10K-raw.jsonl](small-thoughts-10K-raw.jsonl)
 
-Filtered by token length inside thinking brackets, examples that are too long were trimmed.
-The 1500 batch was chosen *randomly*, which could've caused issues. The approach of the next experiment will take that into account and filter them by example type and quality.
+Filtered by character length inside the <|begin_of_thought|> block (threshold: 800 characters); examples exceeding it were discarded. The 1500 batch was chosen *randomly*, which could've caused issues. The approach of the next experiment will take that into account and filter them by example type and quality.
+
+## TESTS
+Check the questions and responses [here (comparison_results.txt)](comparison_results.txt).
+Due to the necessary prompt, the bad results are visible - the answer to "What is the capital of France" is way longer than it needs to be for both models.
