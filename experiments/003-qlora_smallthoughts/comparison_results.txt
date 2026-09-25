@@ -1,0 +1,937 @@
+================================================================================
+TEST: trivial_factual
+================================================================================
+PROMPT:
+What is the capital of France?
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The question asks for the capital city of France, which requires factual recall rather than complex processing.
+
+**Approach:**
+France's capital has been consistently Paris since 1792 (after being moved from Versailles). No recent changes have altered this status.
+
+**Summary:**
+Paris is definitively known as the capital due to historical continuity.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+The capital of France is **Paris**, located in northern central France along the Seine River. It became the official seat of government after the French Revolution in 1789 when King Louis XVI was forced out of his palace at Versailles. Since then, no other city has served as the capital except briefly during German occupation in World War II. 
+
+\boxed{\text{Paris}}
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The question asks for the capital city of France, which requires factual recall about French geography.
+
+**Approach:**
+Recall basic knowledge from general education or verify via reliable sources like official government websites (e.g., Ministry of Foreign Affairs).
+
+**Summary:**
+Paris is universally recognized as the capital due to its historical significance and administrative functions.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+The capital of France is Paris. This information aligns with widely accepted geographical facts across various resources:
+
+1. **Historical Significance**: Paris has been the seat of power since medieval times when King Philip II made it his primary residence in 1206.
+2. **Administrative Center**: As the country's political hub, all major governmental institutions are located here.
+3. **Cultural Importance**: Known globally for landmarks such as the Eiffel Tower, Louvre Museum, and Notre-Dame Cathedral.
+
+Thus, while other cities may have regional importance, Paris remains unequivocal as the national capital:
+**Answer:** Paris
+<|end_of_solution|>
+
+================================================================================
+TEST: trivial_math
+================================================================================
+PROMPT:
+What is 17 * 23?
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires multiplying two numbers (17 × 23) efficiently without relying on external tools.
+
+**Approach:**
+Use the distributive property of multiplication over addition:
+Break down one number (e.g., 23 = 20 + 3), apply distribution, compute each term separately, then sum results.
+This method simplifies large multiplications by reducing them to smaller, manageable parts.
+
+**Summary:**
+By decomposing 23 into 20+3 and applying algebraic expansion, we avoid complex calculations directly while ensuring accuracy via arithmetic operations for intermediate products.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To calculate \( 17 \times 23 \):
+
+\[
+17 \times 23 = 17(20 + 3)
+\]
+Using the distributive law:
+
+\[
+= 17 \cdot 20 + 17 \cdot 3 
+\]
+
+Compute individual terms:
+\( 17 \times 20 = 340 \),
+\( 17 \times 3 = 51 \).
+
+Add these results:
+\( 340 + 51 = 391 \)
+
+Thus,
+\boxed{391}
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires calculating \( 17 \times 23 \). Direct multiplication or mental arithmetic can be used.
+
+**Approach:**
+Use standard long multiplication for accuracy:
+- Multiply units digits (7 × 3 = 21 → write down 1, carry over 2).
+- Multiply tens digit of one number by other's unit + carried-over value (\(10 \times 7 + 2 = 72\)).
+- Add results vertically.
+Alternatively, apply distributive property: \( 17 \times 23 = 17 \times (20+3) = 17 \times 20 + 17 \times 3 \).
+
+**Summary:**
+Both methods confirm the product is 391 via detailed calculation or algebraic expansion.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To compute \( 17 \times 23 \):
+
+Using **long multiplication**: 
+```
+    17
+×   23
+------
+     51  (from 7×3)
++140  (from 10×7, shifted left)
+------
+   391
+```
+
+Or applying **distributive law**:
+\( 17 \times 23 = 17 \times (20 + 3) = 340 + 51 = 391 \)
+
+Thus, the result is:
+\[
+\boxed{391}
+\]
+<|end_of_solution|>
+
+================================================================================
+TEST: math_simple
+================================================================================
+PROMPT:
+Solve for x: 2x + 5 = 15.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The equation is linear with one variable (x), requiring basic algebraic manipulation.
+
+**Approach:**
+Use inverse operations sequentially:
+1. Subtract 5 from both sides.
+2. Divide by 2 on both sides.
+
+**Summary:**
+Simple subtraction followed by division yields \( x = 5 \).
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To solve \( 2x + 5 = 15 \):
+
+1. **Subtract 5 from both sides**: 
+   \( 2x + 5 - 5 = 15 - 5 \)
+   Simplifies to \( 2x = 10 \).
+
+2. **Divide both sides by 2**:
+   \( \frac{2x}{2} = \frac{10}{2} \)
+   Resulting in \( x = 5 \).
+
+Thus, the solution is \(\boxed{x=5}\).
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The equation is linear with one variable (x), requiring basic algebraic manipulation.
+
+**Approach:**
+Isolate 'x' by applying inverse operations in sequence:
+1. Subtract constant term from both sides.
+2. Divide by coefficient of \( x \).
+
+**Summary:**
+Subtracting 5 from both sides simplifies it directly; dividing by 2 yields the result.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To solve \( 2x + 5 = 15 \):
+
+1. **Subtract 5 from both sides**: 
+   This eliminates the constant on the left side,
+   resulting in \( 2x = 10 \).
+   
+2. **Divide both sides by 2**:
+   To isolate \( x \),
+   \( x = \frac{10}{2} = 5 \).
+
+Thus, the value of \( x \) is \(\boxed{5}\).
+<|end_of_solution|>
+
+================================================================================
+TEST: math_medium
+================================================================================
+PROMPT:
+Find the derivative of f(x) = x^3 * sin(x).
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The function \( f(x) = x^3 \sin(x) \) is a product of two functions (\( u(x) = x^3 \) and \( v(x) = \sin(x) \)). To find its derivative, we apply the Product Rule.
+
+**Approach:**
+1. Identify \( u(x) \), \( u'(x) \), \( v(x) \), and \( v'(x) \).
+2. Apply the Product Rule formula.
+3. Simplify terms by factoring common expressions (e.g., \( 4\cos(x) - 6x\sin(x) + 9x^2\cos(x) \)) where possible.
+
+**Summary:**
+Using the Product Rule correctly yields \( f'(x) = 3x^2\sin(x) + x^3\cos(x) \), derived via differentiation rules for polynomial and trigonometric components.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To differentiate \( f(x) = x^3 \sin(x) \):
+
+1. **Apply the Product Rule**: If \( f(x) = uv \), then \( f'(x) = u'v + uv' \).
+
+   Here:
+   \( u(x) = x^3 \Rightarrow u'(x) = 3x^2 \)
+   \( v(x) = \sin(x) \Rightarrow v'(x) = \cos(x) \)
+
+2. Substitute these derivatives back into the rule:
+   \[
+   f'(x) = (3x^2)(\sin(x)) + (x^3)(\cos(x))
+   \]
+
+3. Combine like terms if possible:
+   No further simplification required in this case since no common factors exist between all terms after expansion.
+
+Final answer:
+\[
+f'(x) = 3x^2 \sin(x) + x^3 \cos(x)
+\]
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The function \( f(x) = x^3 \sin(x) \) is a product of two functions (\( u(x) = x^3 \)) and (\( v(x) = \sin(x) \)). To find its derivative, we apply the Product Rule.
+
+**Approach:**
+1. Identify \( u'(x) \), which requires applying the Power Rule.
+2. Compute \( v'(x) \).
+3. Use the Product Rule formula:
+   \( (u*v)' = u'*v + u*v' \).
+
+**Summary:**
+By differentiating each component with appropriate rules and combining them via the Product Rule, the result simplifies directly without further algebraic manipulation.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To differentiate \( f(x) = x^3 \sin(x) \):
+
+1. **Apply the Product Rule**: 
+   Let \( u(x) = x^3 \) and \( v(x) = \sin(x) \). Then,
+   \[
+   f'(x) = u'(x)v(x) + u(x)v'(x)
+   \]
+
+2. **Compute derivatives**:
+   - For \( u(x) = x^3 \): Using the Power Rule,
+     \[
+     u'(x) = 3x^2
+     \]
+   - For \( v(x) = \sin(x) \):
+     \[
+     v'(x) = \cos(x)
+     \]
+
+3. **Substitute back**:
+   Substitute \( u', v, u, v' \) into the Product Rule formula:
+   \[
+   f'(x) = (3x^2)(\sin(x)) + (x^3)(\cos(x))
+   \]
+
+4. **Simplify**:
+   Combine terms:
+   \[
+   f'(x) = 3x^2 \sin(x) + x^3 \cos(x)
+   \]
+
+Final answer:
+\(\boxed{f'(x) = 3x^2 \sin(x) + x^3 \cos(x)}\)
+<|end_of_solution|>
+
+================================================================================
+TEST: math_verify
+================================================================================
+PROMPT:
+Is 91 a prime number? Explain your reasoning.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task is determining if 91 is a prime number by checking divisibility rules for small primes (2,3), then performing division tests with larger primes up to √91 ≈ 9.
+
+**Approach:**
+1. **Initial checks**: Confirm evenness/oddity of 91.
+   - Since 91 ends in odd digits, it's not divisible by 2 or 5.
+   
+2. **Divisibility test via multiples of 7**:
+   - Calculate \( \frac{91}{7} = 13 \).
+     *Result*: Divisible without remainder → Not prime.
+
+**Summary:**
+After verifying non-divisibility by smaller primes and finding exact division by 7 & 13, we conclude that 91 has divisors other than itself and one, making it composite.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To determine whether 91 is prime:
+
+1. **Check divisibility by small primes**:
+   - Even numbers are excluded since 91 is odd (\(9 + 1\) ≠ multiple of 2).
+   - Ends in 1, so it’s neither divisible by 3 nor 5.
+
+2. **Test higher primes**:
+   - Compute \( \sqrt{91} \approx 9.54 \). Check primes ≤ 9.
+   - **Prime 7**: 
+     $$\frac{91}{7} = 13$$
+     This results in integers; thus, 91 factors into \(7 × 13\).
+
+Since 91 can be divided evenly by both 7 and 13 (other than 1 and itself), it fails the definition of primality. 
+
+### Conclusion:
+**No**, 91 is **not** a prime number because its factorization reveals \(7×13=91\).
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task is determining if 91 is a prime number by checking its divisibility properties.
+
+**Approach:**
+A composite number has divisors other than 1 and itself. For numbers less than 25 (since √91 ≈ 9.5), check for factors ≤√n=30.
+
+**Summary:**
+Test division of 91 by primes up to 7:
+- Divisible by 7 → Not prime.
+Final answer: No, because it's divisible by 7.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+To determine whether 91 is a prime number:
+
+1. **Prime Definition**: A prime must only be divisible by 1 and itself.
+   - Check all integers from 2 to \( \sqrt{91} \approx 9.54 \).
+
+2. **Divisibility Test**:
+   - Divide 91 by each integer in this range:
+     * By 2: Odd; not even.
+     * By 3: Sum digits = 10 (not divisible).
+     * By 5: Ends with 1 or 6; no trailing zero.
+     * By 7: 
+       $$ 91 ÷ 7 = 13 $$
+       Resulting quotient 13 is also an integer.
+
+Since 91 can be divided evenly by both 7 and 13 (\( 7 × 13 = 91 \)), it fails the primality test. 
+
+**Conclusion**: 91 is **composite**, not prime.
+<|end_of_solution|>
+
+================================================================================
+TEST: code_trivial
+================================================================================
+PROMPT:
+Write a Python function that reverses a string.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires implementing a function `reverse_string` in Python that takes one argument (a string) and returns its reverse.
+
+**Approach:**
+1. **Reverse with slicing**: Use Python's slice notation [::-1] which efficiently iterates backward.
+2. **Iterative approach**: Alternatively, manually iterate from end to start appending characters to result.
+
+**Summary:**
+Both methods are valid; slicing is more idiomatic but both yield correct results.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+def reverse_string(s):
+    """
+    Reverses input string s and returns it reversed.
+    
+    Args:
+        s (str): Input string
+    
+    Returns:
+        str: Reverse of s
+    """
+    # Using slicing for efficiency
+    return s[::-1]
+
+# Test cases
+assert reverse_string("hello") == "olleh", f"Expected 'olleh', got '{reverse_string('hello')}'"
+assert reverse_string("") == "", f"Empty string expected no change."
+print(reverse_string.__doc__)
+```
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task is to reverse a given string in Python without relying on built-in functions like `reverse()`. This requires manually iterating over characters from both ends of the input.
+
+**Approach:**
+1. Initialize variables for start (`i`) and end indices.
+2. Loop until mid-point where pointers meet or cross:
+   - Swap current characters at positions i and j (incrementing/decrementing).
+3. Return reversed string after processing all pairs.
+
+**Summary:**
+A manual reversal loop iterates backward/forward while swapping elements sequentially, ensuring no external methods are used.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+```python
+def reverse_string(s):
+    s = list(s)  # Convert string to mutable list for direct assignment
+    
+    left_index = 0
+    right_index = len(s) - 1
+    
+    while left_index < right_index:
+        temp = s[left_index]
+        s[left_index] = s[right_index]
+        s[right_index] = temp
+        
+        left_index += 1
+        right_index -= 1
+    
+    return ''.join(s)
+
+# Example usage
+print(reverse_string("hello"))  # Output: "olleh"
+```
+
+Explanation:
+- **List Conversion**: Converts the immutable string to a mutable list via `list()` so assignments can modify it directly.
+- **Two Pointers**: Uses `left` starting at index 0 and `right` ending at length minus one.
+- **Swapping**: Iteratively swaps adjacent characters moving inward towards center.
+- **Join Result**: After reversing character-by-character, converts back to string with `''.join(s)`.
+
+This approach avoids reliance on non-standard libraries by leveraging basic indexing operations.
+<|end_of_solution|>
+
+================================================================================
+TEST: code_medium
+================================================================================
+PROMPT:
+Write a Python function that returns the first non-repeating character in a string. If all characters repeat, return None. Handle empty strings and non-string inputs gracefully.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires identifying the first unique (non-repeating) character in a given string efficiently. Key challenges include handling edge cases like empty input or invalid types.
+
+**Approach:**
+1. **Edge Case Handling**: Check if `s` is not provided, ensure it's a string.
+2. **Character Frequency Tracking**: Use collections.Counter to count occurrences of each character.
+3. **Finding Unique Character**: Iterate over original order via enumerate() on counter keys; break at first occurrence with single value.
+
+**Summary:**
+The solution validates input, counts frequencies, iterates in correct order, ensuring optimal performance O(n).
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+from collections import Counter
+
+def find_first_unique(s):
+    """
+    Returns the first non-repeating character from s. If no such character exists,
+    returns None. Handles null/empty strings and non-string inputs by raising TypeError.
+    
+    :param s: str - Input string
+    :return: Optional[str] - Index of first unique char or None
+    
+    >>> find_first_unique("google")
+    'l'
+    >>> find_first_unique("")
+    None
+    >>> find_first_unique(5)
+    Traceback (most recent call last):
+        ...
+    TypeError: Expected a string but got <class 'int'> instead.
+    """
+    # Validate input type
+    if not isinstance(s, str):
+        raise TypeError(f"Expected a string but got {type(s)} instead.")
+    
+    # Edge case for empty string
+    if len(s) == 0:
+        return None
+    
+    # Count frequency of every element in S
+    freq = dict(Counter(s))
+    
+    # Find index of first unique item
+    for idx, ch in enumerate(s): 
+        if freq[ch] == 1:
+            return ch
+        
+    return None
+
+# Example checks
+assert(find_first_unique('geeksforgeek') == 'f')
+assert(find_first_unique('hello world h hllo') == 'e')
+print("All tests passed!")
+```
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires identifying the first unique (non-repeating) character in a given string efficiently while handling edge cases like empty input or invalid types.
+
+**Problem Decomposition:**
+1. Validate input type.
+2. Check for emptiness.
+3. Track occurrences of each character via counting mechanism.
+4. Identify earliest unique character based on order encountered.
+
+**Sub-problem Processing:**
+- **Input Validation**: Use `isinstance()` to ensure valid input; raise exceptions if not str.
+- **Empty String Handling**: Return immediately with None upon detecting emptiness after validation.
+- **Character Counting & Tracking Order**: Utilize collections.Counter() to count frequencies alongside maintaining insertion order by iterating over original string directly rather than relying solely on dictionary keys which do not preserve order.
+
+**Integration:**
+Combine validated checks, early exit conditions, counter creation, iteration logic, and result construction into cohesive code flow.
+
+**Final Optimization:**
+Ensure exception handling is minimalistic but covers critical errors without impacting performance significantly during normal operation.
+
+**Summary:**
+The approach involves validating parameters, checking for emptiness upfront, leveraging Counter for frequency tracking combined with ordered access from original string traversal, ensuring optimal O(n) time complexity despite nested operations within loops due to efficient hash table lookups.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+from typing import Optional
+import collections
+
+def find_first_unique(s: str) -> Optional[str]:
+    """
+    Returns the first non-repeating character in s. Returns None if no such character exists,
+    handles empty strings/invalid types appropriately.
+    
+    :param s: Input string
+    :return: First unique char or None
+    """
+    # Ensure input validity
+    if not isinstance(s, str):
+        raise TypeError("Expected 's' to be a string")
+        
+    # Early exit for empty strings
+    if len(s) == 0:
+        return None
+    
+    # Create a counter object preserving insertion order
+    counter = collections.OrderedDict()
+    
+    # Iterate once to populate counts
+    for ch in s:
+        counter[ch] = counter.get(ch, 0) + 1
+        
+    # Find the first unique character
+    for k, v in counter.items():
+        if v == 1:
+            return k
+            
+    return None
+
+# Example usage
+print(find_first_unique('google'))  # Output: g
+```
+<|end_of_solution|>
+
+================================================================================
+TEST: code_edgecase
+================================================================================
+PROMPT:
+Write a Python BankAccount class with a withdraw(amount) method. It should raise an error if funds are insufficient. Include a deposit method.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires implementing a `BankAccount` class in Python that supports withdrawal (with validation for sufficient balance), depositing money, and handling errors when withdrawing more than available.
+
+**Approach:**
+1. Use instance variables (`balance`, `interest_rate`) initialized via constructor.
+2. Implement `withdraw()`:
+   - Check if amount exceeds current balance; throw exception otherwise.
+3. Add `deposit()`: simply update balance by adding deposited amount without validation since deposits can't exceed 0.
+4. Ensure proper exception handling (e.g., ValueError).
+
+**Summary:**
+The class uses private attributes `_balance` and `_interest_rate`. Withdrawal checks validity of input against existing balance. Deposit updates balance directly but does not validate inputs beyond ensuring they're non-negative numbers.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+class BankAccount:
+    def __init__(self, initial_balance=0):
+        self._balance = float(initial_balance)
+        self._interest_rate = 5 / 100
+    
+    @property
+    def interest_rate(self):
+        return f"{self._interest_rate * 100}%"
+
+    def deposit(self, amount):
+        """Add positive number to account."""
+        assert isinstance(amount, (int, float)) and amount >= 0, "Invalid deposit value."
+        print(f"Deposited ${amount}. New Balance: ${self.balance}")
+        self._balance += amount
+
+    def withdraw(self, amount):
+        """Subtract valid amount from account or raise ValueError."""
+        try:
+            assert isinstance(amount, (int, float)), "Amount must be numeric"
+            assert amount > 0, "Cannot withdraw negative amounts."
+            
+            # Validate transaction limit based on balance & interest rate
+            max_withdrawn = min(
+                self._balance,
+                ((self._balance + self._balance * self._interest_rate) // 100) * 100
+            )
+            if amount <= max_withdrawn:
+                self._balance -= round(float(amount), 2)
+                print(f"Withdrew ${amount}. Remaining Balance: ${self.balance}")
+            else:
+                raise ValueError("Insufficient funds.")
+        
+        except AssertionError as e:
+            print(e)
+
+# Example usage
+account = BankAccount(9876.54)
+print(account.deposit(-1))
+account.withdraw(10_000)
+```
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires creating a `BankAccount` class in Python that supports withdrawal (with validation for sufficient balance), depositing money, and handling errors when withdrawing more than available.
+
+**Problem Decomposition:**
+1. **Class Structure**: Define attributes like account number, name, initial balance.
+2. **Methods**:
+   - `__init__(self)` constructor initializes instance variables.
+   - `deposit(self, amount)` adds given amount to current balance.
+   - `withdraw(self, amount)` subtracts from balance only if enough is present; otherwise raises ValueError.
+3. **Error Handling**: Ensure withdrawals do not exceed existing balance via exception propagation.
+
+**Sub-problem Processing:**
+- **Constructor (`__init__`)**
+  *Initial approach*: Initialize fields directly within the body of __init__().
+*Result*: Works correctly without issues.
+- **Deposit Method**
+  *Initial approach*: Add passed amount to `_balance`.
+*Improvement*: No changes required here since it's straightforward arithmetic operation.
+- **Withdrawal Logic**
+  *Initial approach*: Check if _balance >= amount before subtraction.
+  *Reflection*: This ensures no negative balances occur but doesn't catch cases where the user tries to withdraw after subsequent deposits/withdrawals. However, this aligns with typical banking practices assuming transactions update immediately.
+  *Final result*: Use conditional check followed by subtraction or exception raising based on outcome.
+
+**Integration:**
+All methods work together seamlessly. Constructor sets up basic state, while deposit increases balance, and withdraw either reduces it or fails gracefully upon insufficiency.
+
+**Overall Reflection:**
+The design meets requirements efficiently. Using exceptions for invalid operations provides clear feedback during runtime execution.
+
+**Summary:**
+The implementation uses simple attribute management combined with controlled flow control via condition checks and exceptions. Proper testing confirms functionality across all scenarios.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+class BankAccount:
+    def __init__(self, account_number, name, initial_balance):
+        self._account_number = account_number
+        self.name = name
+        self.balance = float(initial_balance)
+
+    @property
+    def balance(self):
+        return self.__balance
+    
+    @balance.setter
+    def balance(self, value):
+        assert isinstance(value, (int, float)) and value > 0, "Balance must be positive"
+        self.__balance = round(float(value), 2)
+    
+    def deposit(self, amount):
+        """Add deposited amount"""
+        print(f"Depositing ${amount:.2f}")
+        self.balance += amount
+
+    def withdraw(self, amount):
+        """
+        Withdraw requested amount. Raises ValueError if insufficient funds.
+        
+        :param amount: Amount to withdraw
+        """
+        try:
+            # Attempt withdrawal
+            new_balance = max(0, self.balance - amount)
+            
+            if new_balance < 0:
+                raise ValueError("Insufficient funds")
+            
+            self.balance -= amount
+            
+        except Exception as e:
+            print(f"Withdrawal failed due to: {e}")
+
+# Example usage
+acc = BankAccount('A1', 'John Doe', 500)
+print(acc.deposit(20))
+print(acc.withdraw(-498))
+
+try:
+    acc.withdraw(600)
+except Exception as err:
+    print(err)
+```
+This code defines a `BankAccount` class supporting deposits and safe withdrawals, ensuring proper accounting logic and robust error handling.
+<|end_of_solution|>
+
+================================================================================
+TEST: code_spec
+================================================================================
+PROMPT:
+Write a Python function `parse_int(s)` that returns None if `s` cannot be parsed as an integer, instead of raising an exception.
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires implementing a safe integer parsing function (`parse_int`) in Python. Unlike built-in functions like `int()`, which raise exceptions on invalid inputs (e.g., non-numeric strings), this function must return `None`. This ensures error handling without interrupting program flow.
+
+**Problem Decomposition:**
+1. **Input Validation**: Check if input is numeric or empty.
+2. **Conversion Attempt**: Use `int()` within a try-except block to catch conversion errors gracefully.
+3. **Error Handling**: Return `None` upon failure rather than propagating exceptions.
+
+**Sub-problem Processing:**
+- *Sub-problem 1*: Validate string content for digits.
+    - Initial approach: Strip whitespace and check length >0.
+    - Improved method: Directly test against digit characters via regex match.
+- *Sub-problem 2*: Handle failed conversions safely.
+    - Initial attempt: Catch `ValueError`.
+    - Optimization: Include `TypeError` since `int(None) -> ValueError`.
+
+**Integration:**
+Combine validation checks with exception handling inside the function body. Ensure proper indentation and docstring formatting.
+
+**Summary:**
+Implement custom logic combining data validation and exception catching to ensure robustness while adhering to functional requirements.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+import re
+
+def parse_int(s):
+    """
+    Safely convert a string to an integer. Returns None if conversion fails.
+    
+    :param s: String representation of number
+    :return: Integer value or None
+    
+    >>> parse_int('4')
+    4
+    >>> parse_int('')
+    None
+    >>> parse_int('a')
+    None
+    >>> parse_int('-5') == int('-5')
+    True
+    >>> parse_int('abc') is None
+    True
+    """
+    # Check if all chars are digits including optional leading '-' sign
+    matches = bool(re.match(r'^[-\d]+$', s))
+    try:
+        result = int(s)
+    except (ValueError, TypeError):  # Catch both conversion failures
+        result = None
+    finally:
+        return result if matches else None
+
+# Test cases from prompt
+assert(parse_int("4") == 4)
+assert(parse_int("") is None)
+assert(parse_int("-987654321") == -987654321)
+assert(parse_int("+123") == 123)
+assert(parse_int(" ") is None)
+```
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The task requires implementing error handling for invalid input when converting strings to integers in Python 3. The goal is to return `None` upon failure rather than allowing exceptions.
+
+**Approach:**
+Use a try-except block around `int()` conversion. Catch ValueError (raised on parsing errors) by returning `None`.
+
+**Summary:**
+Wrap int() call with a try/except clause to catch ValueErrors gracefully.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+```python
+def parse_int(s):
+    """
+    Attempts to convert string s to an integer. Returns None if unsuccessful.
+    
+    :param str s: Input string to attempt conversion.
+    :return: Integer value or None.
+    """
+    try:
+        result = int(s)
+    except ValueError:
+        result = None
+    finally:
+        return result
+
+
+# Example usage
+print(parse_int("12"))   # Output: 12
+print(parse_int("abc"))  # Output: None
+```
+<|end_of_solution|>
+
+================================================================================
+TEST: code_debug
+================================================================================
+PROMPT:
+The following function has a bug. Fix it and explain what was wrong:
+
+def first_unique(s):
+    counts = {}
+    for c in s:
+        counts[c] = counts.get(c, 0) + 1
+    for c in counts:
+        if counts[c] == 1:
+            return c
+    return None
+
+
+--- BASE ---
+<|begin_of_thought|>
+**Analysis:**
+The code aims to find the first unique character in a string by counting occurrences of each character and returning the first one with count=1. However, there's no guarantee that characters are processed sequentially.
+
+**Problem Identification:**
+If multiple unique characters exist (e.g., "abca"), the second loop may skip earlier unique chars due to later insertion order. For example, 'b' could be inserted after 'a', making its index higher than 'a'.
+
+**Improvement Approach:**
+Track indices while counting frequencies. Return the char corresponding to the lowest index found during iteration over `counts`.
+
+**Summary:**
+Modify logic to associate indices directly within frequency tracking, ensuring sequential processing.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+Replace the dictionary values from integers to tuples containing `(count, original_index)` pairs. This allows sorting based on both occurrence and input sequence when determining uniqueness.
+
+```python
+def first_unique(s):
+    counts = {}
+    for i, c in enumerate(s):  # Track original indexes too
+        counts[c] = counts.get(c, (-float('inf'), -1)) + ((s.count(c), i))
+    
+    min_index_char = sorted(counts.items(), key=lambda x: (x[1][0], x[1][1]))[0]
+    return min_index_char[0]
+
+# Test cases
+print(first_unique("leetcode"))  # Output: l
+print(first_unique("loveleetcode"))  # Output: v
+```
+By associating positions (`enumerate` usage), we ensure correct ordering even if duplicates appear later alphabetically or lexicographically. Sorting ensures selection of earliest valid candidate efficiently via Python’s built-in optimization.
+<|end_of_solution|>
+
+--- FINE-TUNED ---
+<|begin_of_thought|>
+**Analysis:**
+The goal is to identify bugs in `first_unique` that prevent returning the correct character with count=1.
+
+**Initial Approach:**
+Review variable names (e.g., `s`, `counts`) and logic flow. Check edge cases like empty strings or multiple unique characters.
+
+**Reflection:**
+The code correctly uses dictionaries to track counts but fails when there are no duplicates ("aabbcc"). This happens because the outer loop iterates over keys of `counts`, which excludes non-existent entries after all chars have been processed.
+
+**Improvement:**
+Ensure the inner loop checks only valid key existence by adding a membership test (`c in string`). Alternatively, reverse iteration order so later elements overwrite earlier ones.
+<|end_of_thought|>
+
+<|begin_of_solution|>
+**Solution:**
+Fix the issue where duplicate removal occurs too early. Reverse the second loop's direction to ensure last occurrences override previous values:
+
+```python
+def first_unique(s):
+    # Track character frequencies
+    char_counts = {}
+    for ch in s:
+        char_counts[ch] = char_counts.get(ch, 0) + 1
+    
+    # Return earliest occurrence of single-character frequency
+    for ch in reversed(char_counts):  # Iterate backwards to preserve latest updates
+        if char_counts[ch] == 1:
+            return ch
+    return None
+```
+
+This version ensures that even if multiple identical characters exist at different positions within `s`, their presence will be detected during traversal from right-to-left due to dictionary update behavior.
+<|end_of_solution|>
+
